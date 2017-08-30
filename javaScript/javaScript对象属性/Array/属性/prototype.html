@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+</head>
+<body>
+<script>
+    /*像对象添加属性和方法*/
+    function  employee(name,job,born) {
+        this.name = name;
+        this.job = job;
+        this.born = born;
+    }
+    var bill = new employee()
+    employee.prototype.salary = null;
+    bill.salary = 20000;
+    document.write(bill.salary);
+
+</script>
+</body>
+</html>
