@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toSource</title>
+</head>
+<body>
+<!--显示对象源代码-->
+<script>
+    function employee(name,job,age) {
+        this.name = name;
+        this.job = job;
+        this.age = age;
+    }
+    var bill = new employee("Bill Gates","Engineer",35);
+    document.write(bill.toSource());
+</script>
+</body>
+</html>
