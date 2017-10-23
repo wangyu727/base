@@ -1,0 +1,34 @@
+$aa: #fff434;
+$test: ".test";
+$font: 'font';
+
+
+#{$test + tt} {//变量拼接
+  color: #1e7e34;
+  #{$font + "-size"}:30px;
+}
+
+
+
+body{
+  background: $aa;
+  font-size: 12px;
+  margin: 9px;
+  padding: 8px;
+  right: 8px;
+}
+ul{
+  background-color: $aa;
+  li{
+    color: #1e7e34;
+    a{
+      font: 20px;
+      &:hover{
+        font: 40px;
+      }
+      &::after{
+        content: '';
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //Object.is();//判断是否相等
+
+    /*console.log(-0 == +0);//true
+    console.log(NaN == NaN);//false*/
+
+   /* console.log(Object.is(-0,+0));//false
+    console.log(Object.is(NaN,NaN));//true*/
+
+   /*var arr = [1,2,3,NaN,4,5,6];
+   function hasNaN(array) {
+       var val = array.find((value)=>{
+           Object.is(value,NaN)；
+           })；
+       return val == undefined?false:true;
+   }
+   console.log(hasNaN(arr));
+*/
+
+   /*var obj = {a:1,b:2};
+   var o = {name:'zs'};
+   Object.assign(obj,{c:o});
+   o.name = 'lisi';
+   console.log(obj);*/
+
+   /*var name = 'lisi';
+   var obj = {
+       name,
+       age:23
+   }
+   console.log(obj);
+*/
+
+   //循环对象
+    /*var obj = {
+        a:1,
+        b:2
+    }
+    for(var p in obj){
+        obj[p]
+    }*/
+
+    var obj = {
+        a:1,
+        b:2
+    };
+    console.log(Object.keys(obj));
+    console.log(Object.values(obj));
+    console.log(Object.entries(obj));
+
+
+
+
+
+</script>
+</html>

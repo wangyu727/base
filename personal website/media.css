@@ -1,0 +1,36 @@
+/*@media screen and (max-width: 900px) {*/
+    /*#nav{*/
+        /*position: relative;*/
+        /*min-height: 40px;*/
+    /*}*/
+
+    /*#nav-menu{*/
+        /*width: 180px;*/
+        /*padding: 5px 0;*/
+        /*background:  url("img/resizeApi.png") no-repeat ;*/
+
+
+
+    /*}*/
+    /*#nav li{*/
+        /*display: none;*/
+        /*margin:0;*/
+        /*!*position: absolute;*!*/
+        /*float:*/
+    /*}*/
+    /*#nav a{*/
+        /*display: block;*/
+        /*padding: 5px 5px 5px 5px;*/
+        /*text-align: right;*/
+    /*}*/
+    /*#select a{*/
+        /*background: none;*/
+        /*color: #666;*/
+    /*}*/
+    /*#nav ul:hover li{*/
+        /*display: block;*/
+
+
+    /*}*/
+
+/*}*/

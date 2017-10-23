@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+</ul>
+
+</body>
+<script>
+
+    //arrow  箭头函数 ()=>{}  如果后边是一个大括号可以不加，括号也一样
+   /* var arr = [1,2,3];
+    arr.forEach((value,key)=>{
+        console.log(111)
+    })*/
+
+   /*var fn = function () {
+       console.log(arguments.callee);//函数本身
+
+   }
+   fn(1,2,3);//调用fn*/
+
+    //箭头函数
+    /*var fn = ()=>{
+        console.log(arguments);//箭头函数中arguments不能用
+    }
+    fn(1,2,3);
+*/
+    //扩展运算符...
+   /* var fn = (...arg)=>{
+        console.log(arg);
+    }
+    fn(1,2,3);*/
+
+  /* var aLi = document.getElementsByTagName('li');
+   for(var i=0;i<aLi.length;i++){
+       aLi[i].onclick = function () {
+           setTimeout(function () {
+               console.log(this.innerHTML);
+           }.bund(this),1000);
+       }
+   }*/
+   //箭头函数
+    var aLi = document.getElementsByTagName('li');
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].onclick = function () {
+            setTimeout(()=>{
+                console.log(this.innerHTML);
+            },1000);
+        }
+    }
+</script>
+</html>

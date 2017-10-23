@@ -1,0 +1,67 @@
+body{
+    /*background: url("img/leaf.jpg") no-repeat;*/
+    background-size: 100%;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: burlywood;
+    /*position: fixed;*/
+}
+
+#menu{
+    float: left;
+    margin-left: 35px;
+    margin-top: 30px;
+}
+
+#nav a{
+    text-decoration: none;
+    margin-right: 35px;
+    font-size: 1.7em;
+    font-family: Arial;
+    color: whitesmoke;
+
+}
+#music{
+    height: 25px;
+    float: right;
+    margin-right: 35px;
+}
+
+#me{
+    text-align: center;
+    color: burlywood;
+    font-family: 新宋体;
+    margin-top: 60px;
+}
+
+#photo-myself{
+    border: 3px solid burlywood;
+    width: 400px;
+    margin-top: 60px;
+    margin-left: 150px;
+
+}
+#introduce{
+    width: 500px;
+    float: right;
+    margin-right: 150px;
+    margin-top: -550px;
+
+}
+
+#introduce h2,p{
+    font-family: 楷体;
+    color: saddlebrown;
+}
+#resume{
+    border-radius: 30px;
+    background-color: burlywood;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 1.2em;
+    font-family: 楷体;
+
+}

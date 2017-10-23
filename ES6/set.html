@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //set  存储多个数据
+
+    var s = new Set();
+    s.add(1);//方法
+    s.add(2);
+    s.delete(2);//删除2
+    s.clear();//清空
+    console.log(s);
+    console.log(s.size);//?
+
+    var key = s.keys();
+    for(var k of keys){
+        console.log(k);
+    }
+    //values 和 keys相等
+    var values = s.values();
+    for(var v of keys){
+        console.log(v);
+    }
+
+    var entries= s.entries();
+    for(var e of keys){
+        console.log(e);
+    }
+
+    //数组去重
+    var arr = [1,2,2,2,23,3,5,3];
+    function  fn(array) {
+        var newArr = [];
+        for(var i=0;i<array.length;i++){
+            if(newArr.indexOf(array[i]) == -1){
+                newArr.push(array[i]);
+            }
+        }
+        return newArr;
+    }
+    console.log(fn(arr));
+
+    //用set去重
+    function fn(array) {
+        var s = new Set(array);//数组去重
+        return Array.from(s);//将类似于数组的结构变成数组
+    }
+    console.log()
+
+
+
+
+</script>
+</html>

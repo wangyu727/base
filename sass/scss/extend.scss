@@ -1,0 +1,29 @@
+@import "base";
+
+div{
+  color: #80bdff;
+  font-size: 34px;
+  a{
+    text-decoration: none;
+  }
+}
+p{
+  @extend  div;
+  background-color: #ffc107;
+}
+
+
+@function  add($a,$b){
+  @return $a + $b;
+}
+h1{
+  width: add(20px,50px);
+}
+
+$i:4;
+@while $i>0{
+  .col-#{$i}{
+    width: 20px * $i;
+  }
+  $i: $i - 1;
+}

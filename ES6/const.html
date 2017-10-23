@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //const 定义常量(定义常量所有字母大写)
+
+   /* const NUM = 10;
+    NUM = 20;//报错，常量不能改*/
+
+   const OBJ = {a:1,b:2};
+   OBJ.a = 3;
+   console.log(NUM);//输出a:3,b:2
+   //OBJ中的地址没变，内容变了
+
+
+    const OBJ = {a:1,b:2};
+    Object.freeze(OBJ);//冻结（方法）
+    OBJ.a = 3;
+    console.log(NUM);//输出a:1,b:2
+
+
+</script>
+</html>

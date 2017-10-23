@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+</ul>
+</body>
+
+<script>
+
+    //闭包
+    //一个外部函数，里面有一个内部函数，内部函数调用了外部函数的局部变量
+    //当外部函数执行完成后，局部变量不会被释放，内部函数可以一直使用
+
+    var aLi = document.getElementsByTagName('li');
+
+    /*for(var i=0;i<aLi.length;i++){
+        (function (index) {
+           aLi[index].onclick = function () {
+               console.log(index)
+           }
+        })(i)
+    }*/
+
+    for(let i=0;i<aLi.length;i++){
+        aLi.onclick = function () {
+            console.log(this.index);
+        }
+    }
+
+    /*var aLi = document.getElementsByTagName('li');
+
+    for(var i=0;i<aLi.length;i++){
+          aLi[i].index = i;
+        aLi.onclick = function () {
+            console.log(this.index);
+        }
+    }*/
+
+
+
+
+
+
+    //let 定义变量  变量提升
+
+   /* console.log(a);
+    var a = 10;*/
+   /* 相当于(变量提升)
+    var a;
+    console.log(a);
+    a = 10*/
+   /*var fn = function(){
+       console.log(1111);
+   }
+   fn()；*/
+     //1.let没有变量提升
+  /* console.log(a);
+   let a = 10;*/
+
+    //2.let不允许重复声明
+/*let a = 20;
+let a = 10;*/
+    //3.临时失效区
+/*var a = 4;
+function fn(){
+    console.log(a);
+    let a = 5;
+}
+fn()
+//报错*/
+
+/*
+for(var i=0;i<3;i++){
+    console.log(i);
+}
+console.log(i);
+    输出0,1,2,3
+*/
+
+    //块级作用域（只有let const(只在块里有效)）
+
+   /* {
+        let i=1;
+    }
+    console.log(i);*/
+     /*for(let i=0;i<3;i++){
+        console.log(i);
+    }
+    console.log(i);*/
+
+
+</script>
+</html>
