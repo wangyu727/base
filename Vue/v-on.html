@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <!--@click相当于 v-on:click-->
+        <!--绑定事件-->
+
+        <!--方法一-->
+        <!--<button @click="fn">click</button>
+
+        <!--方法二-->
+       <button @click="fn(1,2)">click</button>
+
+    </div>
+
+</body>
+<script src="vue.js"></script>
+<script>
+
+//    dom.onclick = function () {
+//
+//    }
+
+//方法一：
+//    var vm = new Vue({
+//        el:"#app",
+//        data:{
+//
+//        },
+//        methods:{
+//            fn: function () {
+//                console.log("11111")
+//            }
+//        }
+//    })
+
+//    方法二
+var vm = new Vue({
+    el:"#app",
+    data:{
+
+    },
+    methods:{
+        fn: function (a,b) {
+            console.log(a,b,event.target);
+        }
+    }
+})
+</script>
+</html>

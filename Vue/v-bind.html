@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--绑定属性的-->
+    <!--<p v-bind: id="p">ppppp</p>-->
+    <!--<p :id="p">pppp</p>-->
+    <!--class style -->
+
+    <!--方法一-->
+    <!--<p :class="{red:isRed}">pppp</p>-->
+
+    <!--方法二-->
+    <!--<p class="aaa" :class="[classA,classB]">ppppp</p>-->
+    <!--布尔值-->
+
+    <!--style-->
+    <p :style="{background:bgColor}">pppp</p>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+
+//    方法一
+//    var vm = new Vue({
+//        el:'#app',
+//        data:{
+//            p: 'p111',
+//            isRed:true
+//        }
+//    })
+
+
+var vm = new Vue({
+    el:'#app',
+    data:{
+        p: 'p111',
+        bgColor:'red',
+        isFont:true,
+        classObj:{
+            red:true,
+            font:false
+        },
+        classA:"red",
+        classB:"font"
+    }
+})
+
+
+</script>
+</html>

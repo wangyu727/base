@@ -7,40 +7,43 @@
 <body>
     <div id="app">
         <input type="text" v-model="msg">
+        <!--<span v-text="msg"></span>-->
+        <span v-html="msg"></span>
         {{msg}}
     </div>
 </body>
 <script src="vue.js"></script>
 <script>
-
-//    var vm = new Vue({
-//        el:'#app',
-//        data:{
-//            msg:'aaaa'
-//        }
-//    })
-
-    function V(obj) {
-
-        for(var p in obj){
-            if(p == 'el'){
-                thid{'$'+p} = document.querySelector(obj[p]);//querySelector选择器
-
-            }else if(){
-                thid{'$'+p} = obj[p];
-                for(var q in obj[p]){
-                    thid[q] = obj[p][q];
-                }
-            }
-        }
-    }
-
-    var v = new V({
-        el:'#ppp',
+        var vm = new Vue({
+        el:'#app',
         data:{
             msg:'aaaa'
         }
-    })
+    });
+
+//    function V(obj) {
+//
+//        for(var p in obj){
+//            if(p == 'el'){
+//                thid{'$'+p} = document.querySelector(obj[p]);//querySelector选择器
+//
+//            }else if(){
+//                thid{'$'+p} = obj[p];
+//                for(var q in obj[p]){
+//                    thid[q] = obj[p][q];
+//                }
+//            }
+//        }
+//    }
+//
+//    var v = new V({
+//        el:'#ppp',
+//        data:{
+//            msg:'aaaa'
+//        }
+//    }
+
+
 
 </script>
 </html>

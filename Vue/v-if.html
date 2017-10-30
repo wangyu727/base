@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <!--<h1 v-if="flag == 1">-->
+            <!--hhhhhhh-->
+        <!--</h1>-->
+        <!--<span v-else-if="flag == 2">-->
+            <!--ddddd-->
+        <!--</span>-->
+        <!--<p v-else>-->
+            <!--pppppp-->
+        <!--</p>-->
+
+        <!--<h2 v-show="flag">-->
+            <!--hhhhhhh-->
+        <!--</h2>-->
+        <!--頻繁切換用v-show-->
+
+       <template v-if="flag">
+           <h1>hhhhhhh</h1>
+           <p>pppppppp</p>
+           <span>nnnnnnnnn</span>
+       </template>
+
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+
+    new Vue({
+      el:"#app",
+        data:{
+          flag:true
+        }
+    })
+
+</script>
+</html>
