@@ -92,3 +92,71 @@
 #tabs .selected{
     background: #d2b48c;
 }
+
+/*关于我*/
+#about{
+
+    margin-top: 500px;
+    height: 500px;
+
+}
+#myself{
+    width: 400px;
+    margin-left: 120px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+#introduce{
+    margin-right: 150px;
+}
+#introduce h1{
+    font-size: 32px;
+    color: #000;
+    letter-spacing: 2.5px;
+    text-transform: capitalize;
+}
+#bg{
+    width: 100px;
+    position: absolute;
+    margin-left: -165px;
+    margin-top: 60px;
+}
+#introduce h5,p{
+    color: #757474;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    line-height: 36px;
+    font-family: 'Cabin', sans-serif;
+    margin-top: 60px;
+}
+#introduce p{
+    font-size: 16px;
+    margin-top: 20px;
+}
+#resume {
+
+    float: left;
+    background-color: #425cbb;
+    font-size: 12px;
+    letter-spacing: 0.72px;
+    padding: 17px 70px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+}
+#resume a{
+    color: #ffffff;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}

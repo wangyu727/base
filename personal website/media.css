@@ -57,3 +57,13 @@
     }
 
 }
+
+/*轮播图*/
+@media screen and (max-width: 990px) {
+    #container{
+        margin-top: 50px;
+    }
+    .nav{
+        z-index: 1;
+    }
+}
