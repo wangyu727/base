@@ -1,14 +1,16 @@
 <template>
   <div class='movie'>
-    <common-header></common-header>
+    <common-header title="movie" bgColor="rgb(33, 150, 243)"></common-header>
     <movie-nav></movie-nav>
     <div class='list-box'>
-      <movie-list v-for="obj in movieList" :title="obj.title"
-                  :year = "obj.year" :avg = "obj.avg" :desc = "obj.desc"
+      <movie-list v-for="(obj,index) in movieList" :key="index" :title="obj.nm"
+                  :year = "obj.snum" :img = "obj.img" :avg = "obj.sc" :desc = "obj.cat"
       >
       </movie-list>
     </div>
-
+    <div class="loading" v-show="isShow">
+      <img src="/static/img/loading.gif" alt="">
+    </div>
     <common-footer></common-footer>
   </div>
 </template>
@@ -17,29 +19,36 @@
   import CommonFooter from '../common/CommonFooter'
   import MovieNav from './MovieNav'
   import MovieList from './MovieList'
-
+  import Axios from 'axios'
   export default {
     data () {
       return {
-        movieList: [{
-          title: '霸王别姬',
-          year : "1994",
-          avg  : '9.6',
-          desc : ["爱情",'同性','悬疑']
-        },
-          {
-            title: '正义联盟',
-            year : "2017",
-            avg  : '0',
-            desc : ["动作",'科幻']
-          },
-          {
-            title: '唯创网讯',
-            year : "2012",
-            avg  : '10.0',
-            desc : ["IT",'教育','交友']
-          }]
+        movieList: [],
+        isShow   : false
       }
+    },
+    //https://api.douban.com/v2/movie/top250?count=10&start=0
+    //http://m.maoyan.com/movie/list.json?type=hot&offset=0&limit=1000
+    mounted(){
+      Axios.get(API_PROXY + "http://m.maoyan.com/movie/list.json?type=hot&offset=0&limit=10")
+        .then((res)=>{
+        this.movieList = res.data.data.movies;
+    });
+      let _this           = this;
+      window.onscroll = function(){
+        let clientHeight = document.documentElement.clientHeight;
+        let scrollTop    = document.documentElement.scrollTop;
+        let scrollHeight = document.documentElement.scrollHeight;
+        if(clientHeight + scrollTop >=scrollHeight){
+          _this.isShow = true;
+          Axios.get(API_PROXY + "http://m.maoyan.com/movie/list.json?type=hot&offset="+_this.movieList.length+"&limit=10")
+            .then((res)=>{
+            _this.movieList = _this.movieList.concat(res.data.data.movies);
+          _this.isShow    = false;
+        });
+        }
+      }
+
     },
     components:{
       CommonHeader,
@@ -51,6 +60,11 @@
 </script>
 <style>
   .list-box{
-    margin-top: 2rem;
+    margin-top   : 2rem;
+    margin-bottom: 1rem;
+  }
+  .loading{
+    margin-bottom: 1rem;
+    text-align   : center;
   }
 </style>
