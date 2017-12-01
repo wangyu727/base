@@ -1,5 +1,5 @@
 <template>
-  <div class='footer'>
+  <div class='footer' :style="{background:bgColor}">
     <ul>
       <li><router-link to='/movie'>电影</router-link></li>
       <li><router-link to='/music'>音乐</router-link></li>
@@ -9,12 +9,13 @@
   </div>
 </template>
 <script>
-
+    export default {
+        props: ['title','bgColor']
+    }
 </script>
 <style>
   .footer{
     height    : 1rem;
-    background: rgb(33, 150, 243);
     position  : fixed;
     bottom    : 0;
     width     : 100%;
