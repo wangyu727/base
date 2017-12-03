@@ -30,7 +30,7 @@
     }
 </script>
 <style>
-    .albums{
+    .album{
         position: absolute;
         top     : 1rem;
         bottom  : 1rem;
