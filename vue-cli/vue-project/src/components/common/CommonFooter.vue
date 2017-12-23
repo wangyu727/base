@@ -10,7 +10,12 @@
 </template>
 <script>
     export default {
-        props: ['title','bgColor']
+        props: ['bgColor'],
+        data () {
+            return {
+                msg: 'Welcome to Your Vue.js App'
+            }
+        }
     }
 </script>
 <style>
