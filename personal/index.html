@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>WangYu</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="csrf-param" content="authenticity_token">
+
+    <link rel="stylesheet" media="screen"
+          href="https://assets.hosted.envato.com/packs/application-d85cd3640db08f56e323785fe5bb36c7.css">
+    <script src="js/index.js"></script>
+
+
+<body>
+<div class="live-preview live-preview--desktop">
+    <div class="site-header">
+        <div class="site-header__container container">
+            <div class="site-header__content">
+                <div class="site-header__logo">
+                    <a href="http://envato.com/websites">
+                        <img class="site-header__logo-image"
+                             src="https://assets.hosted.envato.com/assets/envato-market-logo-light-a5ace93f8482e885ae008eb481b9451d379599dfed24868e52b6b2d66f5cf633.svg"
+                             alt="Envato market logo light"></a>
+                </div>
+                <div class="live-preview__header-devices">
+                    <img class="live-preview__header-device--desktop"
+                         data-ga-category="Hosted - Live Preview Device Switcher"
+                         data-ga-label="Graphix - b57e391e-196b-4ee7-ab98-8c76069bf674"
+                         data-role="resize-iframe" data-layout="desktop"
+                         data-ga-action="Click - Desktop"
+                         src="https://assets.hosted.envato.com/assets/icons/desktop-d68aac099d7affd87d1a8ca221d9d68981abff5865d9e53f5a9c780ae6cc2b86.svg"alt="Desktop">
+                    <img
+                        class="live-preview__header-device--tablet"
+                        data-ga-category="Hosted - Live Preview Device Switcher"
+                        data-ga-label="Graphix - b57e391e-196b-4ee7-ab98-8c76069bf674" data-role="resize-iframe"
+                        data-layout="tablet" data-ga-action="Click - Tablet"
+                        src="https://assets.hosted.envato.com/assets/icons/tablet-6d6481984c65df4b6078facea64590d44005120ebe147631259c8ba227aacee6.svg"
+                        alt="Tablet">
+                    <img class="live-preview__header-device--mobile" data-ga-category="Hosted - Live Preview Device Switcher"
+                         data-ga-label="Graphix - b57e391e-196b-4ee7-ab98-8c76069bf674"
+                         data-role="resize-iframe" data-layout="mobile" data-ga-action="Click - Mobile"
+                         src="https://assets.hosted.envato.com/assets/icons/mobile-5d5ccd93fe5bd6898ab17032c1108e97d5ac7ec89fbbd77727ccbe49766f6d80.svg"
+                         alt="Mobile"></div>
+                <div class="site-header__nav">
+                    <div class="site-header__nav-item">
+                        <div class="live-preview__price">
+                            <sup class="live-preview__price-symbol">$</sup>
+                            <span class="live-preview__price-amount"> 16</span>
+                            <div class="live-preview__price-interval">
+                                <span>/ month</span>
+                                <span class="live-preview__price-notes">Paid Annually</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-header__nav-item">
+                        <a class="button" href="https://build.envatohostedservices.com/sign_up?bundle_id=1652&amp;bundle_uuid=b57e391e-196b-4ee7-ab98-8c76069bf674">
+                            GetStarted
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="live-preview__container">
+        <iframe class="live-preview__iframe" frameborder="0" src="http://totaltheme.wpengine.com/graphix"></iframe>
+    </div>
+</div>
+<script>(function () {
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })
+
+    (window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    var ACCOUNTS = ["m"];
+    window._envGaTrackerNames = ACCOUNTS;
+
+    ga("create", "UA-11834194-7", {"name": "m", "allowLinker": true});
+
+    for (var i = 0; i < ACCOUNTS.length; i++) {
+        t = ACCOUNTS[i];
+
+        ga(t + '.require', 'linker');
+        ga(t + '.linker:autoLink', [
+            'activeden.net',
+            'audiojungle.net',
+            'themeforest.net',
+            'videohive.net',
+            'graphicriver.net',
+            '3docean.net',
+            'codecanyon.net',
+            'photodune.net',
+            'market.envato.com',
+            'market.styleguide.envato.com',
+            'elements.envato.com',
+            'build.envatohostedservices.com',
+            'author.envato.com',
+            'envato.com',
+            'forums.envato.com',
+            'community.envato.com',
+            'help.market.envato.com',
+            'careers.envato.com',
+        ]);
+
+        ga(t + '.require', 'ec');
+
+        ga(t + '.require', 'displayfeatures');
+
+        ga(t + '.require', 'linkid', 'linkid.js');
+
+        if ('') {
+            ga(t + '.send', {
+                hitType: 'pageview',
+                page: ''
+            });
+        } else if ('') {
+            // append the analytics_suffix to the page path so the flash alert/error type can be tracked
+            var analyticsSuffix = $.trim('').replace(/([A-Z])/g, '$1').replace(/[-_\s]+/g, '-').toLowerCase();
+            var uri = URI(window.location.pathname + window.location.search);
+            uri.path(uri.path() + '/' + analyticsSuffix);
+            var tracking_path = uri.path() + uri.search();
+            ga(t + '.send', {
+                hitType: 'pageview',
+                page: tracking_path,
+            });
+        } else {
+            ga(t + '.send', 'pageview');
+        }
+    }
+}());
+</script>
+</body>
+</html>
