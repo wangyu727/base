@@ -47,7 +47,7 @@
       });
       }
     }
-    
+
     ,
     components: {
       CommonHeader,
